@@ -6,3 +6,98 @@
 .showing {
   display: block;
 }
+body {
+  font-family: sans-serif;
+  /* display: flex; */
+}
+
+h2 {
+  color: white;
+}
+/* //////////////////// */
+
+.calculator {
+  width: 400px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
+  /* grid-template-rows: repeat(5, 1fr); */
+
+  background-color: black;
+  padding: 10px;
+}
+
+.calc__numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+}
+.calc__operations {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.num {
+  background-color: dimgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+}
+.answer {
+  grid-column: 1 / 4;
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+}
+
+.operator {
+  background-color: darkorange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.reset {
+  background-color: darkgray;
+}
+
+/* ////////////////////// */
+
+.bigScreen {
+  background-color: #f1c40f;
+}
+
+.mediumScreen {
+  background-color: #9b59b6;
+}
+
+.smallScreen {
+  background-color: #3498db;
+}
+
+.hidden {
+  display: none;
+}
+
+.randomNumGame {
+  display: flex;
+  flex-direction: column;
+}
+
+.randomNumGame__rangeInput {
+  display: inline-block;
+  width: 200px;
+}
+.randomNumGame__numInput {
+  width: 50px;
+}
+.randomNumGame__game__text {
+  display: flex;
+  flex-direction: column;
+}

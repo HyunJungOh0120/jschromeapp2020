@@ -6,22 +6,123 @@
     <link rel="stylesheet" href="style.css" />
     <title>JS-ChromeApp</title>
   </head>
-  <body>
+  <body class="mediumScreen">
+    <div class="calculator">
+      <div class="calc__numbers">
+        <div class="answer">0</div>
+        <button class="num" data-num="7">7</button>
+        <button class="num" data-num="8">8</button>
+        <button class="num" data-num="9">9</button>
+        <button class="num" data-num="4">4</button>
+        <button class="num" data-num="5">5</button>
+        <button class="num" data-num="6">6</button>
+        <button class="num" data-num="1">1</button>
+        <button class="num" data-num="2">2</button>
+        <button class="num" data-num="3">3</button>
+        <button class="num" data-num="0">0</button>
+        <button class="num decimal" data-ops="decimal">.</button>
+        <button class="num result" data-ops="result">=</button>
+      </div>
+
+      <div class="calc__operations">
+        <button class="operator clear" data-ops="clear">c</button>
+        <button class="operator" data-ops="plus">+</button>
+        <button class="operator" data-ops="minus">-</button>
+        <button class="operator" data-ops="multiply">*</button>
+        <button class="operator" data-ops="divide">/</button>
+      </div>
+    </div>
+
+    <div class="randomNumGame">
+      <h1 class="randomNumGame__title">Randome Number Game</h1>
+      <h3>
+        Generate a number between 0 and <span class="randomNumber">???</span>
+      </h3>
+      <input
+        type="range"
+        max="200"
+        list="tickmarks"
+        step="1.0"
+        class="randomNumGame__rangeInput"
+      />
+      <datalist id="tickmarks">
+        <option value="0"></option>
+        <option value="50"></option>
+        <option value="100"></option>
+        <option value="150"></option>
+        <option value="200"></option>
+      </datalist>
+
+      <div class="randomNumGame__game">
+        <div class="randomNumGame__choose">
+          <span> Guess the number:</span>
+          <input type="text" class="randomNumGame__numInput" />
+          <input
+            type="button"
+            value="Play!"
+            class="randomNumGame__buttonInput"
+          />
+        </div>
+        <div class="randomNumGame__game__text">
+          <span class="randomNumGame__status hidden">
+            You chose: this, the machine chose: that</span
+          >
+          <span class="randomNumGame__result hidden"> You won!` </span>
+        </div>
+      </div>
+    </div>
+
     <div class="js-clock">
-      <h1 class="js-clock__date">00</h1>
-      <h1 class="js-clock__time">00</h1>
+      <h1>Time Until Christmas</h1>
+      <h2 class="js-clock__date">00</h2>
     </div>
     <form class="js-form form">
       <input type="text" placeholder="What is your name?" />
     </form>
-    <h4 class="js-greetings greetings"></h4>
-    <form class="js-toDoFrom">
-      <input type="text" placeholder="Write a to do" />
+    <h4 class="greetings"></h4>
+
+    <form class="toDoForm">
+      <input class="toDoInput" type="text" placeholder="Write a to do" />
     </form>
-    <ul class="js-toDoList"></ul>
+    <div class="toDoLists">
+      <div class="toDoList">
+        <h2 class="toDoList__title">Pending</h2>
+        <ul class="toDoList toDoList__pending">
+          <!-- <li>
+            <button class="btnDelete">❌</button>
+            <button class="btnFinish">✅</button>
+            <span>Wear a mask</span>
+          </li> -->
+        </ul>
+      </div>
+      <div class="toDoList">
+        <h2 class="toDoList__title">Finished</h2>
+        <ul class="toDoList toDoList__finished">
+          <!-- <li>
+            <button class="btnDelete">❌</button>
+            <button class="btnPending">⏫</button>
+            <span>Cook rice</span>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+    <h2>Hello</h2>
+
+    <h1>Where are you from?</h1>
+    <select>
+      <option value="">--- Choose Your Country ---</option>
+      <option value="Korea">Korea</option>
+      <option value="Greece">Greece</option>
+      <option value="Turkey">Turkey</option>
+      <option value="Finland">Finland</option>
+    </select>
 
     <script src="clock.js"></script>
     <script src="greeting.js"></script>
-    <script src="todo.js"></script>
+    <script src="todo2.js"></script>
+    <script src="event.js"></script>
+    <script src="country.js"></script>
+    <script src="randomnumber.js"></script>
+    <script src="calc.js"></script>
   </body>
 </html>
